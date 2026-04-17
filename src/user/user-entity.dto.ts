@@ -5,7 +5,7 @@ export class UserEntityDto extends EntityDto {
   email: string;
 
   constructor(args: { 
-      id: number; 
+      id: string; 
       createdAt: string; 
       updatedAt: string; 
       email: string;
