@@ -4,7 +4,7 @@ export class EntityDto {
   updatedAt: string;
 
   constructor(args: {
-    id: number;
+    id: string;
     createdAt: string;
     updatedAt: string;
   }) {
