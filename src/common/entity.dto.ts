@@ -1,5 +1,5 @@
 export class EntityDto {
-  id: number;
+  id: string;
   createdAt: string;
   updatedAt: string;
 
