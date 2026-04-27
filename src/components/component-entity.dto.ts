@@ -15,4 +15,5 @@ export class ComponentEntityDto extends EntityDto {
   username: string;
   framework: string;
   description: string;
+  version: string;
 }
