@@ -3,13 +3,11 @@ export class ErrorDto {
   code: string;
   errorType: string;
 
-  constructor(args: {
-    message: string;
-    code: string;
-    errorType: string;
-  }) {
-    this.message = args.message;
-    this.code = args.code;
-    this.errorType = args.errorType;
+  constructor(args?: Record<string, any>) {
+    if (args) {
+      if (args.message) this.message = args.message;
+      if (args.code) this.code = args.code;
+      if (args.errorType) this.errorType = args.errorType;
+    }
   }
 }

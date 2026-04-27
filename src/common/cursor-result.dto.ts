@@ -1,5 +1,10 @@
 import { CursorDto } from "./cursor.dto";
 import { ResultDto } from "./result.dto";
 
-export class CursorResultDto<T> extends ResultDto<CursorDto<T>> {}
+export class CursorResultDto<T> extends ResultDto<CursorDto<T>> {
+
+  constructor(args?: Record<string, any>) {
+    super(args);
+  }
+}
 

@@ -1,16 +1,15 @@
+import { IsNotEmpty, MaxLength } from "class-validator";
 import { EntityDto } from "../common/entity.dto";
 
 export class UserEntityDto extends EntityDto {
-  email: string;
-
-  constructor(args: { 
-      id: string; 
-      createdAt: string; 
-      updatedAt: string; 
-      email: string;
-  }) {
+  constructor(args?: Record<string, any>) {
     super(args);
-    this.email = args.email;
+    if (args) {
+      if (args.email) this.email = args.email;
+    }
   }
-}
 
+  @IsNotEmpty()
+  @MaxLength(1000)
+  email: string;
+}

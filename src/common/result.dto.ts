@@ -5,16 +5,11 @@ export class ResultDto<T> {
   error?: ErrorDto;
   result?: T;
 
-  constructor(args: {
-    error?: ErrorDto;
-    result?: T;
-  }) {
-    if (args.error) {
-      this.success = false;
-      this.error = args.error;
-    } else {
-      this.success = true;
-      this.result = args.result;
+  constructor(args?: Record<string, any>) {
+    if (args) {
+      if (args.success) this.success = args.success;
+      if (args.error) this.error = args.error;
+      if (args.result) this.result = args.result;
     }
   }
 }

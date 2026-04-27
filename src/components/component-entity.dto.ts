@@ -1,23 +1,16 @@
 import { EntityDto } from "@/common/entity.dto";
 
 export class ComponentEntityDto extends EntityDto {
-  constructor(
-    args: {
-      id: string;
-      name: string;
-      username: string;
-      framework: string;
-      description: string;
-      createdAt: string;
-      updatedAt: string;
-    }
-  ){
+  constructor(args?: Record<string, any>) {
     super(args);
-    this.name = args.name;
-    this.username = args.username;
-    this.framework = args.framework;
-    this.description = args.description;
+    if (args) {
+      if (args.name) this.name = args.name;
+      if (args.username) this.username = args.username;
+      if (args.framework) this.framework = args.framework;
+      if (args.description) this.description = args.description;
+    }
   }
+
   name: string;
   username: string;
   framework: string;

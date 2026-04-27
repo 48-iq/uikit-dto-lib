@@ -1,4 +1,8 @@
 import { ResultDto } from "../common/result.dto";
 import { UserEntityDto } from "./user-entity.dto";
 
-export class UserResultDto extends ResultDto<UserEntityDto> {}
+export class UserResultDto extends ResultDto<UserEntityDto> {
+  constructor(args?: Record<string, any>) {
+    super(args);
+  }
+}
