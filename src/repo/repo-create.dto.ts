@@ -1,7 +1,6 @@
 import { ArrayNotEmpty, IsNotEmpty } from "class-validator";
 
 export class RepoCreateDto {
-
   constructor(args?: Record<string, any>) {
     if (args) {
       if (args.name) this.name = args.name;
@@ -12,8 +11,13 @@ export class RepoCreateDto {
 
   @IsNotEmpty()
   name: string;
+
   @IsNotEmpty()
   description: string;
+
   @ArrayNotEmpty()
   components: string[];
+
+  @IsNotEmpty()
+  version: string;
 }
