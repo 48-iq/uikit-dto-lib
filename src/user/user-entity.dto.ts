@@ -11,5 +11,9 @@ export class UserEntityDto extends EntityDto {
 
   @IsNotEmpty()
   @MaxLength(1000)
+  username: string;
+
+  @IsNotEmpty()
+  @MaxLength(1000)
   email: string;
 }
