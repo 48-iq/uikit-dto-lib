@@ -8,6 +8,7 @@ export class ComponentEntityDto extends EntityDto {
       if (args.username) this.username = args.username;
       if (args.framework) this.framework = args.framework;
       if (args.description) this.description = args.description;
+      if (args.version) this.version = args.version;
     }
   }
 
