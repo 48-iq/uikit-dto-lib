@@ -9,6 +9,7 @@ export class ComponentCreateDto {
       if (args.fileExtension) this.fileExtension = args.fileExtension;
       if (args.css) this.css = args.css;
       if (args.dependencies) this.dependencies = args.dependencies;
+      if (args.version) this.version = args.version;
     }
   }
 
@@ -35,4 +36,8 @@ export class ComponentCreateDto {
   @IsNotEmpty()
   @MaxLength(1000)
   dependencies: string;
+
+  @IsNotEmpty()
+  @MaxLength(100)
+  version: string;
 }
